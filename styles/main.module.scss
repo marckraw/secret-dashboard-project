@@ -1,0 +1,62 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "aside header"
+    "aside main"
+    "aside footer"
+}
+
+.header {
+  grid-area: header;
+  border-bottom: 1px solid gray;
+}
+
+.aside {
+  grid-area: aside;
+  border-right: 1px solid gray;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+  border-top: 1px solid gray;
+}
+
+
+.item {
+  position: relative;
+  width: 100%;
+  height: 128px;
+
+  &_1 {
+    background-color: blue;
+  }
+
+  &_2 {
+    background-color: yellow;
+  }
+
+  &_3 {
+    background-color: green;
+  }
+
+  &_4 {
+    background-color: red;
+  }
+  &_5 {
+    background-color: black;
+  }
+  &_6 {
+    background-color: orange;
+  }
+}
