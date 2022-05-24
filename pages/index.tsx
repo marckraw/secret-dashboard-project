@@ -1,61 +1,71 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import classNames from "classnames";
-import styles from '../styles/main.module.scss'
+import s from '../styles/main.module.scss'
 import MainContent from "../components/main-content/main-content";
+import Surface from "../components/surface/surface";
 
 const Main: NextPage = () => {
-    console.log(styles)
   return (
       <>
           <Head>
               <title>Secret Dashboard Project - Main</title>
           </Head>
-          <div className={styles.container}>
-              <header className={styles.header}>
+          <div className={s.container}>
+              <header className={s.header}>
 
               </header>
-              <main className={styles.main}>
+              <main className={s.main}>
                   <MainContent cols={6}>
-                      {
-                          [1,2,3,4,5,6].map((id, index) => {
-                              return (
-                                  <div key={index} className={classNames(styles.item, styles['item_' + id])}>
-                                      This is Div {id}
-                                  </div>
-                              )
-                          })
-                      }
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
                   </MainContent>
                   <MainContent cols={3}>
-                      {
-                          [1,2,3].map((id, index) => {
-                              return (
-                                  <div key={index} className={classNames(styles.item, styles['item_' + id])}>
-                                      This is Div {id}
-                                  </div>
-                              )
-                          })
-                      }
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
                   </MainContent>
                   <MainContent cols={2}>
-                      {
-                          [1,2].map((id, index) => {
-                              return (
-                                  <div key={index} className={classNames(styles.item, styles['item_' + id])}>
-                                      This is Div {id}
-                                  </div>
-                              )
-                          })
-                      }
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                  </MainContent>
+                  <MainContent cols={1}>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
+                  </MainContent>
+                  <MainContent cols={6}>
+                      <Surface className={classNames(s.item)}>
+                          This is Div
+                      </Surface>
                   </MainContent>
               </main>
-              <aside className={styles.aside}>
+              <aside className={s.aside}>
                   <nav>
 
                   </nav>
               </aside>
-              <footer className={styles.footer}>
+              <footer className={s.footer}>
 
               </footer>
           </div>
