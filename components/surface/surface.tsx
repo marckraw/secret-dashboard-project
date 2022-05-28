@@ -13,7 +13,14 @@ const Surface: FC<ISurfaceProps> = ({
 }) => {
     return (
         <div className={classNames(className, s.container)} {...rest}>
-            {children}
+            <div>
+                {children}
+            </div>
+            <button type="button" onClick={() => {
+                throw new Error("Sentry Frontend Error");
+            }}>
+                Throw error
+            </button>
         </div>
     )
 }
